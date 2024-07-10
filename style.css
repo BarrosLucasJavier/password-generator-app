@@ -34,6 +34,7 @@ input[type=text], input[type=range]{
 /* app container */
 .appContainer{
     display: flex;
+    max-width: 540px;
     width: 100%;
     flex-direction: column;
     justify-content: center;
@@ -42,12 +43,13 @@ input[type=text], input[type=range]{
     padding: 1rem;
 }
 .appContainer h1{
-    font-size: 16px;
+    font-size: clamp(1rem, 0.8rem + 1vw, 3rem);
     color: var(--grayish);
 }
 /* Password Input */
 .passContainer{
     position: relative;
+    width: 100%;
 }
 .passContainer input{
     background-color: var(--blackish);
@@ -88,6 +90,7 @@ input[type=text], input[type=range]{
 .lengthContainer h2{
     font-weight: lighter;
     color: var(--green);
+    font-size: clamp(1rem, 0.8rem + 3vw, 2rem);
 }
 #range{
     margin: 1rem 0;
@@ -136,6 +139,9 @@ input[type=checkbox]:checked{
     display: flex;
     gap: 1rem;
 }
+.includeContainer label{
+    font-size: clamp(1rem, 0.8rem + 0.9vw, 1.2rem);
+}
 /* Strength */
 .strengthContainer{
     margin: 1rem 0;
@@ -158,7 +164,7 @@ input[type=checkbox]:checked{
 }
 .graficContainer span{
     font-weight: 600;
-    font-size: 19px;
+    font-size: clamp(1rem, 0.8rem + 1.6vw, 1.5rem);
     color: var(--whitish);
     margin-right: 0.3rem;
 }
