@@ -5,25 +5,58 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
-  
+  <link rel="stylesheet" href="./style.css">
+  <script src="./main.js" defer></script>
   <title>Frontend Mentor | Password generator app</title>
 </head>
 <body>
+  <main class="mainContainer">
+    <section class="appContainer">
+      <h1>Password Generator</h1>
+      <div class="passContainer">
+        <input type="text" name="password" id="password" placeholder="P4$5W0rD!">
+        <img src="./assets/images/icon-copy.svg" alt="Icon Copy">
+      </div>
+      <div class="optionContainer">
+        <div class="lengthContainer">
+          <p>Character Length</p>
+          <h2>10</h2>
+        </div>
+        <input type="range" name="range" id="range" min="0" max="20" class="range">
+        <div class="includeContainer">
+          <div>
+            <input type="checkbox" name="uppercase" id="uppercase">
+            <label for="uppercase">Include Uppercase Letters</label>
+          </div>
+          
+          <div>
+            <input type="checkbox" name="lowercase" id="lowercase">
+            <label for="lowercase">Include Lowercase Letters</label>
+          </div>  
 
-  Password Generator
-
-  P4$5W0rD!
-
-  Character Length
-
-  Include Uppercase Letters
-  Include Lowercase Letters
-  Include Numbers
-  Include Symbols
-
-  Strength
-
-  Generate
-
+          <div>
+            <input type="checkbox" name="number" id="number">
+            <label for="number">Include Numbers</label>
+          </div>
+          
+          <div>
+            <input type="checkbox" name="symbols" id="symbols">
+            <label for="symbols">Include Symbols</label>
+          </div>
+        </div>
+        <div class="strengthContainer">
+          <h3>STRENGTH</h3>
+          <div class="graficContainer">
+            <span>MEDIUM</span>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+          </div>
+        </div>
+        <button>GENERATE <img src="./assets/images/icon-arrow-right.svg" alt="Icon Arrow Right"></button>
+      </div>
+    </section>
+  </main>
 </body>
 </html>

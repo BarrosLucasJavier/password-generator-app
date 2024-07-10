@@ -1,0 +1,191 @@
+:root{
+    --blackish: #24232c;
+    --grayish: #817d92;
+    --whitish: #e6e5ea;
+    --black: #18171f;
+    --green: #a4ffaf;
+    --red: #f64a4a;
+    --orange: #fb7c58;
+    --yellow: #f8cd65;
+    --litters-range:50%;
+    --varAfter: '';
+}
+/* RESET */
+*{
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: "JetBrains Mono", monospace;
+}
+body{
+    background-color: var(--black);
+    color: var(--whitish);
+}
+input[type=text], input[type=range]{
+    width: 100%;
+}
+/* Main */
+.mainContainer{
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/* app container */
+.appContainer{
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+}
+.appContainer h1{
+    font-size: 16px;
+    color: var(--grayish);
+}
+/* Password Input */
+.passContainer{
+    position: relative;
+}
+.passContainer input{
+    background-color: var(--blackish);
+    border: none;
+    padding: 1rem;
+    font-size: 2rem;
+    color: var(--whitish);
+}
+.passContainer>img{
+    position: absolute;
+    top: 50%;
+    right: 15px;
+    transform: translate(-50%, -50%);
+}
+.passContainer::after{
+    content: var(--varAfter);
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    right: 30px;
+    color: var(--green);
+}
+.passContainer>img:hover{
+    cursor: pointer;
+    filter: grayscale(100%);
+}
+/* Options Container */
+.optionContainer{
+    background-color: var(--blackish);
+    width: 100%;
+    padding: 1rem;
+}
+.lengthContainer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.lengthContainer h2{
+    font-weight: lighter;
+    color: var(--green);
+}
+#range{
+    margin: 1rem 0;
+}
+/* input range */
+input[type='range']{
+    appearance: none;
+    background: linear-gradient(to right, var(--green) var(--litters-range), var(--black) var(--litters-range));
+    height: 10px;
+}
+input[type='range']::-webkit-slider-thumb
+{
+    appearance: none;
+    width: 25px;
+    height: 25px;
+    background: var(--whitish);
+    border-radius: 50%;
+}
+input[type='range']::-moz-range-thumb{
+    appearance: none;
+    width: 25px;
+    height: 25px;
+    background: var(--whitish);
+    border-radius: 50%;
+    border: none;
+}
+/* checkbox */
+input[type=checkbox]{
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border: 2px solid var(--whitish);
+}
+input[type=checkbox]:checked{
+    width: 20px;
+    height: 20px;
+    background-image: url('./assets/images/icon-check.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: var(--green);
+    border: none;
+}
+/* Include Container */
+.includeContainer>div{
+    margin: 0.7rem 0;
+    display: flex;
+    gap: 1rem;
+}
+/* Strength */
+.strengthContainer{
+    margin: 1rem 0;
+    background-color: var(--black);
+    padding: 1rem;
+    color: #979797;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.graficContainer{
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+.graficContainer>div{
+    width: 9px;
+    height: 24px;
+    border: 2px solid var(--whitish);
+}
+.graficContainer span{
+    font-weight: 600;
+    font-size: 19px;
+    color: var(--whitish);
+    margin-right: 0.3rem;
+}
+/* States */
+.graficContainer .red{
+    background-color: var(--red);
+    border: 2px solid var(--red);
+}
+.graficContainer .orange{
+    background-color: var(--orange);
+    border: 2px solid var(--orange);
+}
+.graficContainer .yellow{
+    background-color: var(--yellow);
+    border: 2px solid var(--yellow);
+}
+.graficContainer .green{
+    background-color: var(--green);
+    border: 2px solid var(--green);
+}
+/* Button */
+.optionContainer>button{
+    width: 100%;
+    padding: 1rem;
+    background-color: var(--green);
+    color: var(--black);
+    font-size: 18px;
+    font-weight: bolder;
+    border: none;
+}
