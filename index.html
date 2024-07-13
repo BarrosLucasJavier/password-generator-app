@@ -14,8 +14,9 @@
     <section class="appContainer">
       <h1>Password Generator</h1>
       <div class="passContainer">
-        <input type="text" name="password" id="password" placeholder="P4$5W0rD!">
+        <input type="text" name="password" id="password" placeholder="P4$5W0rD!" readonly>
         <img src="./assets/images/icon-copy.svg" alt="Icon Copy">
+        <span class="textCopied"></span>
       </div>
       <div class="optionContainer">
         <div class="lengthContainer">
@@ -47,14 +48,14 @@
         <div class="strengthContainer">
           <h3>STRENGTH</h3>
           <div class="graficContainer">
-            <span>MEDIUM</span>
+            <span></span>
             <div></div>
             <div></div>
             <div></div>
             <div></div>
           </div>
         </div>
-        <button>GENERATE <img src="./assets/images/icon-arrow-right.svg" alt="Icon Arrow Right"></button>
+        <button id="buttonGenerate">GENERATE <img src="./assets/images/icon-arrow-right.svg" alt="Icon Arrow Right"></button>
       </div>
     </section>
   </main>

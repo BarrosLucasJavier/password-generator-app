@@ -8,7 +8,6 @@
     --orange: #fb7c58;
     --yellow: #f8cd65;
     --litters-range:50%;
-    --varAfter: '';
 }
 /* RESET */
 *{
@@ -64,8 +63,7 @@ input[type=text], input[type=range]{
     right: 15px;
     transform: translate(-50%, -50%);
 }
-.passContainer::after{
-    content: var(--varAfter);
+.textCopied{
     position: absolute;
     top: 50%;
     transform: translate(-50%,-50%);
