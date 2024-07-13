@@ -107,6 +107,11 @@ input[type='range']::-webkit-slider-thumb
     background: var(--whitish);
     border-radius: 50%;
 }
+input[type='range']::-webkit-slider-thumb:hover{
+    background: var(--black);
+    cursor: pointer;
+    border: 1px solid var(--green);
+}
 input[type='range']::-moz-range-thumb{
     appearance: none;
     width: 25px;
@@ -115,12 +120,22 @@ input[type='range']::-moz-range-thumb{
     border-radius: 50%;
     border: none;
 }
+input[type='range']::-moz-range-thumb:hover{
+    background: var(--black);
+    cursor: pointer;
+    border: 1px solid var(--green);
+}
+
 /* checkbox */
 input[type=checkbox]{
     appearance: none;
     width: 20px;
     height: 20px;
     border: 2px solid var(--whitish);
+}
+input[type=checkbox]:hover{
+    border: 2px solid var(--green);
+    cursor: pointer;
 }
 input[type=checkbox]:checked{
     width: 20px;
@@ -192,4 +207,14 @@ input[type=checkbox]:checked{
     font-size: 18px;
     font-weight: bolder;
     border: none;
+}
+.optionContainer>button:hover{
+    background-color: var(--blackish);
+    color: var(--green);
+    cursor: pointer;
+    outline: 2px solid var(--green);
+}
+.optionContainer>button:hover svg path{
+    stroke: var(--green);
+    fill: var(--green);
 }
